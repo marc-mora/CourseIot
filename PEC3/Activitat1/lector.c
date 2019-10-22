@@ -6,10 +6,6 @@ int dump(char *nom) {
 	char linia[256];
 	printf("Obrint el fitxer : %s\n",nom);
 	fitxer = fopen(nom,"r");
-	//if (!(fitxer = fopen(nom,"r"))) {
-	//	printf("Error al obrir el fitxer.");
-	//	return 2;
-	//	}
 	while(fgets(linia,sizeof(linia),fitxer)) {
 		printf("%s",linia);
 	}
@@ -21,6 +17,6 @@ int main(int estado, char **contenido) {
 		printf("Ajuda: lector 'fitxer'\n\n");
 		return 1;
 	}
-	int bk = dump(contenido[1]);
-	return bk;
+	int tt = dump(contenido[1]);
+	return tt;
 }
