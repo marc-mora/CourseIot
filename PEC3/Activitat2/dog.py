@@ -24,7 +24,6 @@ gos1 = Dog("Kiwi", 7)
 gos2 = Dog("Rex", 1)
 gos3 = Dog("Gipsy", 4)
 
-print('La edad mas alta de los perros es::')
-print(str(get_biggest_number(gos1.age, gos2.age, gos3.age)))
+print('La edad mas alta de los perros es: ' + str(get_biggest_number(gos1.age, gos2.age, gos3.age)))
 
 
