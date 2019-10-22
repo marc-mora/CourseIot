@@ -1,1 +1,26 @@
-Aqui anira el codi en c del lector.
+#include <stdio.h>
+#include <stdlib.h>
+
+int dump(char *nom) {
+	FILE *fitxer;
+	char linia[256];
+	printf("Obrint el fitxer : %s\n",nom);
+	fitxer = fopen(nom,"r");
+	//if (!(fitxer = fopen(nom,"r"))) {
+	//	printf("Error al obrir el fitxer.");
+	//	return 2;
+	//	}
+	while(fgets(linia,sizeof(linia),fitxer)) {
+		printf("%s",linia);
+	}
+	fclose(fitxer);
+	return 0;
+}
+int main(int estado, char **contenido) {
+	if (estado!=2) {
+		printf("Ajuda: lector 'fitxer'\n\n");
+		return 1;
+	}
+	int bk = dump(contenido[1]);
+	return bk;
+}
