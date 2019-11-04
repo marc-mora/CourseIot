@@ -4,9 +4,6 @@
 #include <WiFi101OTA.h>
 #include "arduino_secrets.h"
 
-extern int      PinBotonGrande;
-extern int      PinLedFinBotonGrande;
-
 char ssid[] = SECRET_SSID;
 char pass[] = SECRET_PASS;
 
