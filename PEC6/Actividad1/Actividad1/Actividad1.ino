@@ -46,7 +46,7 @@ void loop() {
   abrirFichero();
   leerSensores();
   guardarDatos();
-  //enviarSerial();
+  enviarSerial();
   cerrarFichero();
   delay(1000);
 }
@@ -54,7 +54,6 @@ void loop() {
 void verificarDia(){
   initTime = millis();
   tiempoTranscurrido = initTime - initInTime;
-  Serial.println(tiempoTranscurrido);
   if (tiempoTranscurrido >= millisUnDia) {
     borraFichero();
     initInTime += millisUnDia;
