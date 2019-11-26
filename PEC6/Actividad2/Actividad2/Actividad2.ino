@@ -1,12 +1,12 @@
 #include <Arduino_MKRENV.h>
 
-const char* ssid = "KiwiHome";
-const char* pass =  "Kiwi618938899";
+const char* ssid = "";
+const char* pass =  "";
 const char* mqttServer = "10.12.1.55";
 const int   mqttPort = 1883;
 const char* deviceId = "arduino-1";
 const char* userBroker = "curso_iot";
-const char* passBroker = "mmora";
+const char* passBroker = "";
 const char* callbackTopic = "homie/arduino-1/callback/#";
 char* topic = "";
 
