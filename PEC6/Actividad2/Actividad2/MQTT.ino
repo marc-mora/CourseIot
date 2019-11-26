@@ -19,7 +19,7 @@ void callback(char* topicBack, byte* payload, unsigned int length) {
         topic = "homie/arduino-1/homie";
         publicar("$homie", "4.0.0", topic);
     }
-
+//TODO tots els callbacks que falten. He deixat un fet a mode de demo.
     if(topicStr == "homie/arduino-1/callback/$name"){
       
     }
