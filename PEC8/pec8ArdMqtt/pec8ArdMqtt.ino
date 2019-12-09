@@ -15,8 +15,8 @@ char mqttpass[] = MQTT_PASS;
 char mqtthost[] = MQTT_HOST;
 // Password
 int status = WL_IDLE_STATUS;     // the WiFi radio's status
-IPAddress mqttserver(54, 154, 59, 72);
-const int mqttport = 1883;
+IPAddress mqttserver(, , , );
+const int mqttport = ;
 const int relay1 = 1;
 const int relay2 = 2;
 boolean rele1State = LOW;
@@ -36,11 +36,6 @@ void callback(char* topic, byte* payload, unsigned int length) {
   String topicStr = topic;
   Serial.println(topicStr);
   Serial.println(payload[0]);
-  //homie/arduino/relays/relays/rele2/set
-  //49
-  //homie/arduino/relays/relays/rele1/set
-  //48
-  //acciones segun payload y publicar confirmacion del mensaje
   if (topicStr == "homie/arduino/relays/relays/rele1/set"){
     if (payload[0] == '0') {
       rele1State = LOW;
